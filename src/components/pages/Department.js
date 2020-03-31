@@ -1,4 +1,5 @@
 import React from 'react';
+import ItemList from './ItemList';
 
 import { MdSort } from 'react-icons/md/index';
 
@@ -17,6 +18,7 @@ const Department = () => {
 				<li className='dep-nav-btn'>Colour</li>
 				<li className='dep-nav-btn'>Price</li>
 			</ul>
+			<ItemList />
 		</div>
 	);
 };

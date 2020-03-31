@@ -12,7 +12,7 @@
 			letter-spacing: 0.5rem;
 		}
 		.dep-nav {
-			margin-top: 4rem;
+			margin: 4rem 0;
 			font-size: 2.5rem;
 			font-weight: 600;
 			letter-spacing: -1px;
@@ -39,6 +39,74 @@
 				&:hover {
 					background-color: $black;
 					color: $smokey;
+				}
+			}
+		}
+		.ItemList {
+			// background-color: $ash;
+			width: 100%;
+			min-height: 200rem;
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			grid-template-rows: 55rem 55rem 55rem 55rem;
+			//grid-template-areas: repeat(auto-fit, minmax(200px, 1fr));
+			grid-row-gap: 1.4rem;
+			grid-column-gap: 1.4rem;
+			.item {
+				background-color: #c3c3c3;
+				border-radius: 5rem;
+				position: relative;
+				background-position: center;
+				background-size: contain;
+				background-repeat: no-repeat;
+				overflow: hidden;
+
+				.overlay {
+					width: 100%;
+					height: 100%;
+					background: #ecf0f3bb;
+					position: absolute;
+					top: 0;
+					transition: all 0.4s ease-in-out;
+					opacity: 0;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					font-weight: 600;
+					align-items: center;
+					font-size: 2.5rem;
+					text-align: center;
+					.black-btn {
+						width: 15rem;
+						font-size: 1.8rem;
+					}
+				}
+
+				.wishlist {
+					position: absolute;
+					top: 2.5rem;
+					right: 3.5rem;
+					border-radius: 10rem;
+					background-color: $smokey;
+					padding: 1.5rem;
+
+					svg {
+						// width: 3rem;
+						// height: 3rem;
+
+						// color: $black;
+						// position: relative;
+						height: 3rem;
+						width: 3rem;
+						right: 5rem;
+						// top: 0.5rem;
+						color: $ash;
+					}
+				}
+				&:hover {
+					.overlay {
+						opacity: 1;
+					}
 				}
 			}
 		}
