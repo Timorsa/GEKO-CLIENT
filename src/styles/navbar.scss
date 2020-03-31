@@ -1,0 +1,54 @@
+.navbar {
+	font-size: 4.5rem;
+	list-style: none;
+	width: 20%;
+	max-height: 100vh;
+	max-width: 50rem;
+	.nav-itm {
+		background-color: #d6d4d4;
+		margin: 4rem 0;
+		padding: 4rem 3rem;
+		border-radius: 2rem;
+		transition: all 0.25s ease-in-out;
+		overflow: hidden;
+		position: relative;
+		min-width: 40rem;
+		clear: both;
+		span {
+			width: 20rem;
+			height: 24rem;
+			display: block;
+			position: absolute;
+			right: 0;
+			//bottom: -2rem;
+			bottom: -5rem;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: top;
+		}
+		.tops {
+			//background-image: url('https://cdn.shopify.com/s/files/1/1171/8456/products/Hyper_Blossom_-_Crop_Tee_Mockup_700x.png?v=1571609126');
+			background-image: url('https://i.ya-webdesign.com/images/ulzzang-girl-png-11.png');
+		}
+		.dresses {
+			background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/0965f534-e4e9-4804-a226-8c57b7d2063d/d6rm95l-405254cf-3071-4568-b682-f3076d30061a.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzA5NjVmNTM0LWU0ZTktNDgwNC1hMjI2LThjNTdiN2QyMDYzZFwvZDZybTk1bC00MDUyNTRjZi0zMDcxLTQ1NjgtYjY4Mi1mMzA3NmQzMDA2MWEucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Pxz9k-flK_znbKIFtGeNtvH9KM0jRnjY2bT-zLrk2rU');
+		}
+		.jeans {
+			background-image: url('https://www.itl.cat/pngfile/big/104-1044105_emily-rudd-transparent-background-png-vector-clipart-people.png');
+			background-position: bottom;
+		}
+		.shoes {
+			background-image: url('https://i.pinimg.com/originals/05/23/2f/05232f28810c27b20bfe1b2de17f7854.png');
+			background-position: bottom;
+			width: 15rem;
+		}
+		&:hover {
+			padding: 7rem 1rem;
+			background-color: $ash;
+			color: $smokey;
+		}
+	}
+	.home:hover {
+		padding: 4rem 3rem;
+	}
+}

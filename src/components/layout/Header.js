@@ -1,18 +1,20 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { MdFavoriteBorder, MdSearch } from 'react-icons/md/index';
 
 const Header = () => {
 	return (
 		<div className='header'>
-			<div className='hd-left'>
-				<div className='logo'></div>
-				<a to='/'>MEN</a>
-				<a to='/'>WOMEN</a>
+			<div className='logo'>
+				<span>G</span>.<span>E</span>.<span>K</span>.<span>O</span>
 			</div>
-			<div className='hd-right'>
-				<a>user</a>
-				<a>heart</a>
-				<a>shopping-kart</a>
+			<div className='search'>
+				<input type='text' />
+				<MdSearch />
+			</div>
+			<div className='header-right'>
+				<MdFavoriteBorder />
+				<span className='cart'>0</span>
+				<span className='user'>US</span>
 			</div>
 		</div>
 	);
