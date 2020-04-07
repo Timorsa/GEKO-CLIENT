@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import ItemList from './ItemList';
 
 import { MdSort } from 'react-icons/md/index';
 
 const Department = () => {
+	let { department } = useParams();
+	if (!department) {
+		department = 'home';
+	}
 	return (
 		<div className='department'>
-			<h2 className='headline primary-fnt'>Home</h2>
+			<h2 className='headline primary-fnt'>{department.toUpperCase()}</h2>
 			<ul className='dep-nav secondary-fnt'>
 				<li className='dep-nav-btn'>
 					<MdSort />
@@ -18,7 +23,21 @@ const Department = () => {
 				<li className='dep-nav-btn'>Colour</li>
 				<li className='dep-nav-btn'>Price</li>
 			</ul>
-			<ItemList />
+			<div className='sort primary-fnt'>
+				<label>
+					<input type='radio' class='radio' name='example' />
+					Price high to low
+				</label>
+				<label>
+					<input type='radio' class=' radio' name='example' />
+					price low to high
+				</label>
+				<label>
+					<input type='radio' class=' radio' name='example' />
+					What's new
+				</label>
+			</div>
+			<ItemList department={department} />
 		</div>
 	);
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 import { MdFavoriteBorder, MdSearch } from 'react-icons/md/index';
 
-const Header = () => {
+const Header = ({ cart }) => {
 	return (
 		<div className='header'>
 			<div className='logo'>
@@ -13,7 +13,7 @@ const Header = () => {
 			</div>
 			<div className='header-right'>
 				<MdFavoriteBorder />
-				<span className='cart'>0</span>
+				<span className='cart'>{cart.length}</span>
 				<span className='user'>US</span>
 			</div>
 		</div>

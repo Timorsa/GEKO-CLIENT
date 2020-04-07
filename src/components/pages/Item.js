@@ -13,6 +13,8 @@ const Item = () => {
 			}}>
 			<div className='overlay'>
 				<div className='title secondary-fnt'>Converse All Star Shoes</div>
+				<div className='price primary-fnt'>79$</div>
+				<div className='black-btn secondary-fnt'> + Add to cart</div>
 				<div className='black-btn secondary-fnt'>Product Page</div>
 			</div>
 			<div className='wishlist'>

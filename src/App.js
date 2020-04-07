@@ -1,4 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
+import {
+	BrowserRouter as Router,
+	Switch,
+	Route,
+	useParams,
+} from 'react-router-dom';
 
 //components
 import Header from './components/layout/Header';
@@ -10,17 +16,27 @@ import './App.scss';
 import { MdHome } from 'react-icons/md';
 
 const App = () => {
+	const [cart, setCart] = useState([]);
 	return (
-		<div className='App'>
-			<Header />
-			<div className='container'>
-				<Banner />
-				<div className='store'>
-					<Navbar />
-					<Department />
+		<Router>
+			<div className='App'>
+				<Header cart={cart} />
+				<div className='container'>
+					<Banner />
+					<div className='store'>
+						<Navbar />
+						<Switch>
+							<Route exact path='/'>
+								<Department />
+							</Route>
+							<Route path='/store/:department'>
+								<Department />
+							</Route>
+						</Switch>
+					</div>
 				</div>
 			</div>
-		</div>
+		</Router>
 	);
 };
 
