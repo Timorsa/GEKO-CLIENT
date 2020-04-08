@@ -1,19 +1,19 @@
 import React from 'react';
 import { MdFavoriteBorder } from 'react-icons/md/index';
 
-const Item = () => {
+const Item = ({ item }) => {
+	console.log(item);
+	const { images, title, description, price, brand } = item;
+	console.log(images, title, price);
 	return (
 		<div
 			className='item'
 			style={{
-				backgroundImage:
-					'url(' +
-					'https://i.ya-webdesign.com/images/converse-transparent-all-star-3.png' +
-					')'
+				backgroundImage: 'url(' + `${images[0]}` + ')',
 			}}>
 			<div className='overlay'>
-				<div className='title secondary-fnt'>Converse All Star Shoes</div>
-				<div className='price primary-fnt'>79$</div>
+				<div className='title secondary-fnt'>{title}</div>
+				<div className='price primary-fnt'>{price}$</div>
 				<div className='black-btn secondary-fnt'> + Add to cart</div>
 				<div className='black-btn secondary-fnt'>Product Page</div>
 			</div>

@@ -7,23 +7,25 @@ const ItemList = ({ department }) => {
 
 	async function getProducts() {
 		try {
-			const response = await axios.get('https://localhost:5000/product');
-			console.log(response);
+			const response = await axios.get('http://localhost:5000/product');
+			setItems(response.data);
 		} catch (err) {
 			console.log(err);
 		}
 	}
+
 	useEffect(() => {
 		getProducts();
 	}, []);
+
 	return (
 		<div className='ItemList'>
-			<Item />
-			<Item />
-			<Item />
-			<Item />
-			<Item />
-			<Item />
+			{items !== [] ? (
+				items.map((item) => <Item key={item._id} item={item} />)
+			) : (
+				<h4>No Items To Show</h4>
+			)}
+			}
 		</div>
 	);
 };
